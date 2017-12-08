@@ -1,0 +1,25 @@
+.navbar-brand {
+  font-family: 'Peralta', cursive;
+}
+
+.table-fon tr:first-of-type{
+     background: #343A40;
+     color: white ;
+}
+.table-fon, tr:nth-child(odd){
+  background: #f7f7f7;
+
+}
+
+
+.table-fon, td{
+    width: 200px;
+    margin: 20px auto;
+    border: 2px solid rgba(68, 172, 250, 0.1);
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.pagessdlink{
+    background: greenyellow;
+}

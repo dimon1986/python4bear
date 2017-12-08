@@ -1,0 +1,23 @@
+{% extends 'accounts/base_accounts.html' %}
+{% load bootstrap3 %}
+{% load static %}
+
+{% block title %}My account{% endblock %}
+
+
+{% block content %}
+
+     {% block header %}
+       <h2 class="text-center logo my-4">Мой аккаунд</h2>
+    {% endblock header %}
+
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-success">Сохранить изменения</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

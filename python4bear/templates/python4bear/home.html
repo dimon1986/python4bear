@@ -1,0 +1,54 @@
+{% extends 'python4bear/base.html' %}
+{% load bootstrap3 %}
+
+
+      {% block sidebar %}
+        <li class="breadcrumb-item active">Toics</li>
+      {% endblock sidebar%}
+
+      {% block content %}
+      <table class="table">
+        <thead class="table-fon">
+        <tr class="table-fon">
+          <th >Тема</th>
+          <th>Посты</th>
+          <th>Комменты</th>
+          <th>Последний</th>
+        </tr>
+      </thead>
+
+    <tbody>
+        {% for topic in topics %}
+          <tr>
+            <td>
+              <h3>
+              <a href="{% url 'python4bear:posts_all' topic.pk %}">{{ topic }}</a>
+              </h3>
+              <small class="text-muted d-block">{{ topic.description }}</small>
+            </td>
+            <td class="align-middle">{{ topic.posts.count }}</td>
+            <td class="align-middle">{{ topic.get_comment_count }}</td>
+            <td class="align-middle">
+                {% with comment=topic.get_last_comment %}
+                    {% if comment %}
+              <small>
+                <a href="{% url 'python4bear:view_post' topic.pk comment.post.pk %}">
+                  Создал: {{ comment.owner.username }} : {{ comment.date_added }}
+                </a>
+              </small>
+                     {% else %}
+                       <small class="text-muted">
+                         <em>Пока ещё нет коментов.</em>
+                       </small>
+                    {% endif %}
+            {% endwith %}
+
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+       {% include 'python4bear/pagination.html' %}
+
+{% endblock content%}
