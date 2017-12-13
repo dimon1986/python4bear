@@ -1,7 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="478df57a-ae3a-45b6-af25-fb00b1df39bf" name="Default" comment="" />
+    <list default="true" id="478df57a-ae3a-45b6-af25-fb00b1df39bf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/python4bear/static/js/jquery-3.2.1.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ee03572c-fb40-4daa-9b8a-f8eaac3b0614.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ee03572c-fb40-4daa-9b8a-f8eaac3b0614.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/ee03572c-fb40-4daa-9b8a-f8eaac3b0614/storage.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/ee03572c-fb40-4daa-9b8a-f8eaac3b0614/storage.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Django_Lib.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/admin.py" afterPath="$PROJECT_DIR$/accounts/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/apps.py" afterPath="$PROJECT_DIR$/accounts/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/forms.py" afterPath="$PROJECT_DIR$/accounts/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/models.py" afterPath="$PROJECT_DIR$/accounts/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/base_accounts.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/base_accounts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/my_account.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/my_account.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/password_reset.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/password_reset.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/templates/accounts/signup.html" afterPath="$PROJECT_DIR$/accounts/templates/accounts/signup.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/tests.py" afterPath="$PROJECT_DIR$/accounts/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/urls.py" afterPath="$PROJECT_DIR$/accounts/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/accounts/views.py" afterPath="$PROJECT_DIR$/accounts/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Django-1.11.7.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Django-1.11.7.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Markdown-2.6.9-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Markdown-2.6.9-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Markdown-2.6.9-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Markdown-2.6.9-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/OleFileIO_PL.py" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/OleFileIO_PL.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/WHEEL" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/WHEEL" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/zip-safe" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/Pillow-4.3.0.dist-info/zip-safe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/dj_database_url-0.4.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/dj_database_url-0.4.2.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/dj_static-0.0.6-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/dj_static-0.0.6-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/dj_static-0.0.6-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/dj_static-0.0.6-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/django/contrib/admin/static/admin/fonts/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/django_bootstrap3-9.1.0-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/django_bootstrap3-9.1.0-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/django_bootstrap3-9.1.0-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/django_bootstrap3-9.1.0-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/django_js_asset-0.1.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/django_js_asset-0.1.1.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/gunicorn-19.7.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/gunicorn-19.7.1.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/olefile-0.44-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/olefile-0.44-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/olefile-0.44-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/olefile-0.44-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/LICENSE.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/README.html" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/README.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/README.rst" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/olefile/README.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/pip-9.0.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/pip-9.0.1.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/pkg_resources/_vendor/pyparsing.py" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/pkg_resources/_vendor/pyparsing.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/python_decouple-3.1-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/python_decouple-3.1-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/python_decouple-3.1-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/python_decouple-3.1-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/pytz-2017.3.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/pytz-2017.3.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/setuptools-28.8.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/setuptools-28.8.0.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/static3-0.7.0-py3.6.egg-info/PKG-INFO" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/static3-0.7.0-py3.6.egg-info/PKG-INFO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Lib/site-packages/static3-0.7.0-py3.6.egg-info/installed-files.txt" afterPath="$PROJECT_DIR$/blog/Lib/site-packages/static3-0.7.0-py3.6.egg-info/installed-files.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/Activate.ps1" afterPath="$PROJECT_DIR$/blog/Scripts/Activate.ps1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/activate" afterPath="$PROJECT_DIR$/blog/Scripts/activate" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/activate.bat" afterPath="$PROJECT_DIR$/blog/Scripts/activate.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/deactivate.bat" afterPath="$PROJECT_DIR$/blog/Scripts/deactivate.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/django-admin.py" afterPath="$PROJECT_DIR$/blog/Scripts/django-admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/enhancer.py" afterPath="$PROJECT_DIR$/blog/Scripts/enhancer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/explode.py" afterPath="$PROJECT_DIR$/blog/Scripts/explode.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/gifmaker.py" afterPath="$PROJECT_DIR$/blog/Scripts/gifmaker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/painter.py" afterPath="$PROJECT_DIR$/blog/Scripts/painter.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/pilconvert.py" afterPath="$PROJECT_DIR$/blog/Scripts/pilconvert.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/pildriver.py" afterPath="$PROJECT_DIR$/blog/Scripts/pildriver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/pilfile.py" afterPath="$PROJECT_DIR$/blog/Scripts/pilfile.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/pilfont.py" afterPath="$PROJECT_DIR$/blog/Scripts/pilfont.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/pilprint.py" afterPath="$PROJECT_DIR$/blog/Scripts/pilprint.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/player.py" afterPath="$PROJECT_DIR$/blog/Scripts/player.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/static-script.py" afterPath="$PROJECT_DIR$/blog/Scripts/static-script.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/thresholder.py" afterPath="$PROJECT_DIR$/blog/Scripts/thresholder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/Scripts/viewer.py" afterPath="$PROJECT_DIR$/blog/Scripts/viewer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/pyvenv.cfg" afterPath="$PROJECT_DIR$/blog/pyvenv.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_blog/settings.py" afterPath="$PROJECT_DIR$/my_blog/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_blog/urls.py" afterPath="$PROJECT_DIR$/my_blog/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my_blog/wsgi.py" afterPath="$PROJECT_DIR$/my_blog/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/admin.py" afterPath="$PROJECT_DIR$/python4bear/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/apps.py" afterPath="$PROJECT_DIR$/python4bear/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/forms.py" afterPath="$PROJECT_DIR$/python4bear/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/python4bear/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/models.py" afterPath="$PROJECT_DIR$/python4bear/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/static/css/accounts.css" afterPath="$PROJECT_DIR$/python4bear/static/css/accounts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/python4bear/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/python4bear/static/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/base.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/edit_post.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/edit_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/home.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/new_post.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/new_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/pagination.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/posts_all.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/posts_all.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html" afterPath="$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/tests.py" afterPath="$PROJECT_DIR$/python4bear/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/urls.py" afterPath="$PROJECT_DIR$/python4bear/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python4bear/views.py" afterPath="$PROJECT_DIR$/python4bear/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +105,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+            <state relative-caret-position="350">
+              <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
               <folding>
                 <element signature="e#311#320#0" expanded="true" />
               </folding>
@@ -40,12 +118,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+            <state relative-caret-position="-2447">
+              <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_post.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1350">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python4bear/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-485">
+              <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +153,8 @@
       <file leaf-file-name="edit_post.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/edit_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-325">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="-222">
+              <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -142,7 +242,6 @@
         <option value="$PROJECT_DIR$/my_blog/urls.py" />
         <option value="$PROJECT_DIR$/python4bear/apps.py" />
         <option value="$PROJECT_DIR$/python4bear/tests.py" />
-        <option value="$PROJECT_DIR$/python4bear/views.py" />
         <option value="$PROJECT_DIR$/accounts/views.py" />
         <option value="$PROJECT_DIR$/accounts/tests.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/base_accounts.html" />
@@ -150,7 +249,6 @@
         <option value="$PROJECT_DIR$/python4bear/templates/python4bear/home.html" />
         <option value="$PROJECT_DIR$/python4bear/templates/python4bear/new_post.html" />
         <option value="$PROJECT_DIR$/python4bear/templates/python4bear/posts_all.html" />
-        <option value="$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/my_account.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/password_change.html" />
@@ -160,9 +258,11 @@
         <option value="$PROJECT_DIR$/accounts/templates/accounts/password_reset_confirm.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/password_reset_done.html" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/signup.html" />
-        <option value="$PROJECT_DIR$/python4bear/templates/python4bear/base.html" />
-        <option value="$PROJECT_DIR$/my_blog/settings.py" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/my_blog/settings.py" />
+        <option value="$PROJECT_DIR$/python4bear/views.py" />
+        <option value="$PROJECT_DIR$/python4bear/templates/python4bear/base.html" />
+        <option value="$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html" />
       </list>
     </option>
   </component>
@@ -173,10 +273,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="y" value="1" />
-    <option name="width" value="1250" />
-    <option name="height" value="1018" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,7 +295,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -261,10 +360,6 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -283,9 +378,28 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my_blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -554,17 +668,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="1" width="1250" height="1018" extended-state="1" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4533679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32079905" sideWeight="0.5034542" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32079905" sideWeight="0.5069085" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16114286" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32079905" sideWeight="0.49654576" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.312" sideWeight="0.49309152" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16108108" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61190474" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -573,7 +688,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49654576" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="manage.py@my_blog" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -606,8 +722,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/python4born/templates/python4born/home.html" />
-    <entry file="file://$PROJECT_DIR$/python4born/urls.py" />
     <entry file="file://$PROJECT_DIR$/python4born/static/css/accounts.css" />
     <entry file="file://$PROJECT_DIR$/python4born/views.py" />
     <entry file="file://$PROJECT_DIR$/my_blog/wsgi.py">
@@ -643,9 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -656,23 +767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python4bear/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2450">
-          <caret line="98" column="36" lean-forward="false" selection-start-line="98" selection-start-column="36" selection-end-line="98" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/python4bear/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="19" column="15" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -800,7 +896,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -808,7 +903,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2697">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -832,19 +926,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/posts_all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
@@ -928,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,36 +1031,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/base.html">
+    <entry file="file://$PROJECT_DIR$/.env" />
+    <entry file="file://$USER_HOME$/Downloads/django-beginners-guide-master/django-beginners-guide-master/.env.example">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="50">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/malysh/learning_log/learning_logs/templates/learning_logs/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-922">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python4bear/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-485">
+          <caret line="43" column="15" lean-forward="true" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+        <state relative-caret-position="350">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
           <folding>
             <element signature="e#311#320#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/view_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="61" lean-forward="true" selection-start-line="0" selection-start-column="61" selection-end-line="0" selection-end-column="61" />
+        <state relative-caret-position="-1350">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2447">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/python4bear/templates/python4bear/edit_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-325">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="-222">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>

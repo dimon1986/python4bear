@@ -40,6 +40,9 @@ class PostsAllListView(ListView):
 def view_post(request, pk, post_pk):
     """Просматриваем конкретный Пост"""
     post = get_object_or_404(Post, topic__pk=pk, pk=post_pk)
+    post.views += 1
+    post.save()
+    post.date_added = timezone.now()  # обнавляю дату поста
 
     if request.method != 'POST':
         # Данные не отправлялись; создается пустая форма.
@@ -52,9 +55,6 @@ def view_post(request, pk, post_pk):
             new_comment.post = post
             new_comment.owner = request.user
             new_comment.save()
-            post.views += 1
-            post.save()
-            post.date_added = timezone.now()  # обнавляю дату поста
 
 
         return redirect('python4bear:view_post', pk=post.topic.pk, post_pk=post.pk)
