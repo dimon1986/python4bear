@@ -1,0 +1,39 @@
+{% load static %}
+
+{% with user=action.user profile=action.user.profile %}
+<div class="action">
+	<div class="images">
+		{% if profile.photo %}
+            <img class="img-circle" src="{{ MEDIA_URL }}{{ profile.photo.crop.60x60 }}">
+         {% else %}
+             <img src="{% static 'img/avatar.svg' %}" alt="{{ twit.owner.username }}" width="70">
+		{% endif %}
+
+		{% if action.target %}
+			{% with target=action.target %}
+                {% if target.image %}
+                <a href="{{ target.image.url }}">
+                    <img src="{{ target.image.crop.320x400 }}" class="image-detail">
+                </a>
+                {% endif %}
+			{% endwith %}
+		{% endif %}
+
+	</div>
+	<div class="info">
+		<p><span class="date">{{ action.created|timesince }} назад</span><br />
+		<a href="{{ user.get_absolute_url }}">{{ user.first_name }}
+        {% if not user.first_name %}
+            {{ user }}
+            {% endif %}
+        </a>
+		{{ action.verb }}
+		{% if action.target %}
+		    {% with target=action.target %}
+				<a href="{{ target.get_absolute_url }}">{{ target }}</a>
+			{% endwith %}
+		{% endif %}
+		</p>
+	</div>
+</div>
+{% endwith %}

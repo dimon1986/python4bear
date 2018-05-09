@@ -1,0 +1,18 @@
+{% load static %}
+{% load counter %}
+<link rel="stylesheet" href="{% static 'css/image_app.css' %}">
+
+<div class="row">
+    {% for image in images %}
+      <div class="col-md-4 portfolio-item">
+        <div class="image">
+          <a href="{{ image.get_absolute_url }}" class="title">{{ image.title }}</a>
+            <a href="{{ image.get_absolute_url }}">
+              <img src="{{ image.image.crop.320x400 }}" class="image-detail">
+            </a>
+            <br>
+          <span>Просмотров: {% page_views image.get_absolute_url %}</span>
+        </div>
+      </div>
+{% endfor %}
+</div>

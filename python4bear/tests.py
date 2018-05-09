@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your tests here.
 from django.core.urlresolvers import reverse
 from django.urls import resolve
-from .views import home, posts, new_post, posts_comments
+from .views import home, new_post
 from .models import Topic, Post, Comment
 from .forms import PostForm, CommentForm
 

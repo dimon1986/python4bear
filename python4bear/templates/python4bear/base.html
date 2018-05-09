@@ -5,125 +5,177 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Django Bear{% endblock title%}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{#    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">#}
+
+    <title>{% block title %}Python4Bear{% endblock title%}</title>
     <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
 
-    {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
     {% block stylesheet %}
-    <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
+    {#  создаем блок для того чтобы цсс поменять в акаунте  #}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
     {% endblock stylesheet%}
+    {% bootstrap_css %}
+
+{% block JS %}
+   <!-- jQuery -->
+    <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- IE10 viewport bug workaround -->
+	<script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+	<!-- Placeholder Images -->
+	<script src="{% static 'js/holder.min.js' %}"></script>
+{% endblock JS %}
+
 
 </head>
 
 <body>
 {% block body %}  <!-- HERE -->
 
-<nav class="navbar navbar-inverse navbar-dark bg-dark">
 
+    <!-- Hавигационный бар... -->
+<nav class="navbar navbar-inverse">
 <div class="container">
-<a class="navbar-brand" href="{% url 'python4bear:home' %}">Python4Bear</a>
+<div class="container-fluid">
 
- <!--Название сайта и кнопка раскрытия меню для мобильных-->
- <div class="navbar-header">
-
- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
- <span class="sr-only">Toggle navigation</span>
- <span class="icon-bar"></span>
- <span class="icon-bar"></span>
- <span class="icon-bar"></span>
- </button>
- </div>
-
-
-<!--/.nav-collapse -->
-
- <!--Само меню-->
-
-
-
-<div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-
-
-    <!-- Single button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Статьи
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Django</a>
-    <a class="dropdown-item" href="#">PyGame</a>
-    <a class="dropdown-item" href="#">PyQt5</a>
-  </div>
+<!-- BRAND -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="{% url 'python4bear:hell' %}">Python4Bear</a>
 </div>
 
-<!-- Single button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Контакты
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Портфолио</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">ЧАТ</a>
-  </div>
-</div>
+<!-- COLLAPSIBLE NAVBAR -->
+<div class="collapse navbar-collapse" id="alignment-example">
 
-    <!-- Single button -->
+<!-- Links -->
+<ul class="nav navbar-nav">
+
+<li class="active"><div class="btn-group">
+	 <a class="navbar-brand " href="{% url 'python4bear:home' %}">Shards</a>
+  </div></li>
+<li class="active"><div class="btn-group">
+	 <a class="navbar-brand " href="{% url "images:list" %}">Images</a>
+  </div></li>
+<li class="active"><div class="btn-group">
+	 <a class="navbar-brand " href="{% url "accounts:user_list" %}">People</a>
+  </div></li>
+<li class="active"><div class="btn-group">
+	 <a class="navbar-brand " href="{% url 'accounts:track' %}">Track</a>
+  </div></li>
+
 {% if user.is_authenticated %}
-<div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Привет, {{ user.username }}!
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="{% url 'accounts:my_account' %}">Мой аккаунд</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="{% url 'accounts:logout' %}">Выход</a>
-  </div>
-    {% else %}
-    <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Привет, чужой!
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="{% url 'accounts:login' %}">Вход</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="{% url 'accounts:signup' %}">Регистрация</a>
-  </div>
-    {% endif %}
+  <li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Привет, {{ user.username }}!<span class="caret"></span></a>
+<ul class="dropdown-menu" aria-labelledby="about-us">
+<li><a class="dropdown-item" href="{% url 'accounts:my_account' %}">ред. аккаунд</a></li>
+<li><a class="dropdown-item" href="{% url 'accounts:logout' %}">Выход</a></li>
+</ul>
+</li>
+   {% else %}
+   <li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Привет, чужой!<span class="caret"></span></a>
+<ul class="dropdown-menu" aria-labelledby="about-us">
+    {#  для того что бы был адекватный переход и не вызывались ошибки, маст хев или нет не знаю, но работает.#}
+<li><a class="dropdown-item" href="{% url 'accounts:login' %}?next={{ request.get_full_path|urlencode }}">Вход</a></li>
+<li><a class="dropdown-item" href="{% url 'accounts:signup' %}?next={{ request.get_full_path|urlencode }}">Регистрация</a></li>
+</ul>
+</li>
+{% endif %}
+
+</ul>
+
+<!-- Search -->
+
+<form action="{% url 'search:index' %}" class="navbar-form navbar-right" method="get">
+    <div class="input-group">
+        <input id="search" name="q" type="text" class="form-control  input-sm" placeholder="Поиск">
+        <span class="input-group-btn">
+            <button type="submit" class="btn btn-default  input-sm">{% bootstrap_icon 'search' %}</button>
+        </span>
+    </div>
+</form>
+
+
+
 </div>
-
-
-    <form class="navbar-form navbar-right" role="search">
-  <div class="form-group">
-  <input type="text" class="form-control" placeholder="Поиск на сайте">
-  </div>
-  <button type="submit" class="btn btn-primary "><span class = "glyphicon glyphicon-search"></span> Искать</button>
- </form>
-
-
-</div><!-- /.navbar-collapse -->
 </div>
 </div>
-</nav><!-- /навигационный бар... -->
+</nav>
+
+  <!-- /Hавигационный бар!! -->
 
 <div class="container">
   <ol class="breadcrumb my-4">
     {% block sidebar %}
     {% endblock sidebar%}
   </ol>
-
     {% block content %}
     {% endblock content%}
 </div>
 
+{% block footer %}
+
+
+{% endblock footer %}
+    <footer class="commentclin">
+        <div class="small-footer">
+        	<div class="container">
+                <hr>
+        		<p>
+
+                    <a href="https://www.python.org" target="_blank">Python 3.6</a> |
+                    <a href="https://www.djangoproject.com" target="_blank">Django 1.11</a> |
+                    <a href="https://vk.com/id18127193" target="_blank">Contact My</a>
+                     </p>
+
+
+        		<p><small class="text-muted d-block">
+                    <a class="btn btn-default btn-xs" href="{% url "python4bear:post_feed" %}" title="RSS">RSS</a>
+
+                    <a href="https://github.com/dimon1986" target="_blank"
+           class="btn btn-default btn-xs" role="button" title="ImGit">ImGit</a>
+
+                    Copyright &copy; Dimon & Sony 2018
+                </small></p>
+
+
+        	</div>
+        </div>
+	</footer>
+
 {% endblock body %}
 
-{% bootstrap_javascript %}
-{% block JS %}
 
-{% endblock JS %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src=" http://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js "></script>
+    <script>
+        var csrftoken = $.cookie('csrftoken');
+        function csrfSafeMethod(method) {
+            // эти методы HTTP не требуют защиты CSRF
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
 
+        $(document).ready(function(){
+            {% block domready %}
+            {% endblock %}
+		});
+    </script>
 </body>
 </html>

@@ -11,13 +11,61 @@
        <h2 class="text-center logo my-4">Мой аккаунд</h2>
     {% endblock header %}
 
-  <div class="row">
-    <div class="col-lg-6 col-md-8 col-sm-10">
-      <form method="post" novalidate>
+   <div class="row justify-content-left">
+      <div class="col-lg-10 col-md-10 col-sm-10">
+        <div class="card">
+          <div class="card-body">
+
+
+  <div class="row justify-content-left">
+    <div class="col-lg-10 col-md-10 col-sm-10">
+{#        enctype="multipart/form-data" !!! обязательно что бы сохранилась картинка!!#}
+
+      <form method="post" enctype="multipart/form-data" novalidate>
         {% csrf_token %}
-        {% bootstrap_form form %}
-        <button type="submit" class="btn btn-success">Сохранить изменения</button>
+
+          <div class="col-lg-5 col-md-10 col-sm-10">
+          {% bootstrap_form user_form %}
+
+              <p>Перетащите кнопку в панель закладок, для нахождения образов на других сайтах ↓</p>
+                  <div class="btn button_js">
+                    <a href="javascript:{% include "images/bookmarklet_launcher.js" %}" class="button">Достать Образ!</a>
+                    </div>
+
+
+         {% if messages %}
+        {% for message in messages %}
+             <div class="alert alert-info alert-dismissible" role="alert">
+                {{ message|safe }}
+            </div>
+        {% endfor %}
+        {% endif %}
+
+          </div>
+
+
+
+          <div class="col-lg-5 col-md-10 col-sm-10">
+
+             {% if not request.user.profile.photo %}
+            <img src="{% static 'img/avatar.svg' %}" alt="" class="w-50">
+            {% endif %}
+
+          {% bootstrap_form profile_form %}
+          </div>
+
+        <button type="submit" class="btn btn-success pull-left">Сохранить изменения</button>
       </form>
     </div>
   </div>
+
+     </div>
+          <div class="card-footer text-muted text-left">
+             <a href="{% url "accounts:password_change" %}">Изменить пароль</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 {% endblock %}

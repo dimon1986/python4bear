@@ -1,0 +1,81 @@
+{% extends 'python4bear/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+
+{% block title %}{{ view_user.get_full_name }}{% endblock %}
+
+{% block sidebar %}
+    <li class="breadcrumb-item"><a href="{% url "accounts:user_list" %}">People</a></li>
+
+    {% if not view_user.get_full_name %}
+        <li class="breadcrumb-item active">{{ view_user }}</li>
+        {% else %}
+        <li class="breadcrumb-item active">{{ view_user.get_full_name }}</li>
+    {% endif %}
+{% endblock sidebar%}
+
+{% block content %}
+
+    <div class="profile-info">
+
+    {% if view_user.profile.photo %}
+        <img class="img-circle" src="{{ view_user.profile.photo.crop.160x160 }}">
+        {% else %}
+         <img src="{% static 'img/avatar.svg' %}" alt="" class="w-50">
+        {% endif %}
+
+    </div>
+
+    {% with total_followers=view_user.followers.count %}
+        <span class="count">
+            <span class="total">{{ total_followers }}</span>
+            follower{{ total_followers|pluralize }}
+        </span>
+
+
+
+        {% if request.user.id != view_user.id %}
+        <a href="#" data-id="{{ view_user.id }}" data-action="{% if request.user in view_user.followers.all %}un{% endif %}follow" class="btn btn-default follow button">
+            {% if request.user not in view_user.followers.all and request.user != view_user%}
+                Follow
+            {% else %}
+                Unfollow
+            {% endif %}
+        </a>
+        {% endif %}
+
+{#        <h2>{{ view_user.followers.all }}</h2>#}
+        <h2>Сущего картинки:</h2>
+
+        <div id="image-list" class="image-container">
+            {% include "images/image/list_ajax.html" with images=view_user.images_created.all %}
+        </div>
+    {% endwith %}
+{% endblock %}
+
+{% block domready %}
+    $('a.follow').click(function(e){
+        e.preventDefault();
+        $.post('{% url "accounts:user_follow" %}',
+            {
+                id: $(this).data('id'),
+                action: $(this).data('action')
+            },
+            function(data){
+                if (data['status'] == 'ok')
+                {
+                    var previous_action = $('a.follow').data('action');
+
+                    // toggle data-action
+                    $('a.follow').data('action', previous_action == 'follow' ? 'unfollow' : 'follow');
+
+                    // toggle link text
+{#                    $('a.follow').text(previous_action == 'follow' ? 'Unfollow' : 'Follow');#}
+
+                    // update total followers
+                    var previous_followers = parseInt($('span.count .total').text());
+                    $('span.count .total').text(previous_action == 'follow' ? previous_followers + 1 : previous_followers - 1);
+                }
+        });
+    });
+{% endblock domready %}

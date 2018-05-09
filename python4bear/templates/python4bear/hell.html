@@ -1,0 +1,75 @@
+{% extends 'python4bear/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% load blog_tags %}
+
+{% block sidebar %}
+    <li class="breadcrumb-item active">Приветствую тебя скиталец!</li>
+{% endblock sidebar%}
+
+{% block content %}
+        <div class="container-fluid">
+
+		<!-- Center Column -->
+		<div class="col-sm-10">
+        <div class="small-print">
+        	<div class="container">
+                <p><small class="text-muted d-block">Всего постов {% total_posts %}, последнии записи:</small></p>
+        	</div>
+        </div>
+        <hr>
+
+
+
+        {% for post in posts %}
+          {% if post.status == 'published'%}
+			<!-- Articles -->
+			<div class="row">
+
+				<article class="col-xs-10">
+
+					<h2>{{ post.title }}</h2>
+
+                    {% if post.image %}
+                        <div class="kartinka">
+                    <img class="kartinka" src="{{ MEDIA_URL }}{{ post.image.crop.160x200 }}" alt="" title="">
+                        </div>
+                    {% endif %}
+                    <div class="texst">{{ post.text|striptags|safe|truncatewords:30|linebreaks }}
+					<div class="mt-3">
+                        <a href="{% url 'python4bear:view_post' post.topic.pk post.slug %}" class="btn btn-default" role="button">Ознакомиться</a>
+                    </div>
+					<p class="pull-right"><span class="tag tag-default">Tags:</span> <span class="tag tag-default">
+                        {% for tag in post.tags.all %}
+                        <a href="{% url "python4bear:post_all_by_tag" post.topic.pk tag.slug %}">
+                        {{ tag.name }}
+                        </a>
+                        {% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </span></p>
+
+					<ul class="list-inline">
+						<li class="list-inline-item"><a href="#">{{ post.publish|date:'M d, Y' }}</a></li>
+                        <li class="list-inline-item"><a href="#"><span class="glyphicon glyphicon-comment"></span> {{  post.comment.count }} Комменты</a></li>
+						<li class="list-inline-item"><a href="#"><span class="glyphicon glyphicon-share"></span> {{ post.views }} Просмотры</a></li>
+					</ul>
+                    </div>
+				</article>
+			</div>
+			<hr class="bl">
+
+         {% endif %}
+      {% endfor %}
+{% include 'python4bear/pagination_def.html'  with page=posts %}
+		</div><!--/Center Column-->
+
+	  <!-- Right Column -->
+	  {% include 'python4bear/rait_colum.html' %}
+
+	</div><!--/container-fluid-->
+
+{% endblock content%}
+
+{% block footer %}
+    		{% include 'python4bear/footer_box.html' %}
+{% endblock footer %}

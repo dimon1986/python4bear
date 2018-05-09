@@ -17,7 +17,8 @@
 
   <form action="{% url 'python4bear:new_post' topic.pk %}" method='post'>
     {% csrf_token %}
-    {% bootstrap_form form %}
+    {{ form.media }}
+    {{ form.as_p }}
     <button name='submit' class="btn btn-primary">Добавить</button>
   </form>
 

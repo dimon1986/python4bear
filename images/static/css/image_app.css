@@ -1,0 +1,19 @@
+
+.image {
+    margin-bottom:10px;
+}
+
+.image img {
+    border:1px solid #ccc;
+    padding:2px;
+    margin:2px;
+    opacity:0.85;
+
+}
+
+.image img.selected,
+.image img:hover {
+    border:1px solid #222222;
+    opacity:1;
+}
+

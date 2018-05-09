@@ -1,5 +1,5 @@
 .navbar-brand {
-  font-family: 'Peralta', cursive;
+  font-family: 'Peralta', cursive !important;
 }
 
 .table-fon tr:first-of-type{
@@ -22,4 +22,37 @@
 
 .pagessdlink{
     background: greenyellow;
+}
+
+.hollitexst{
+    overflow: hidden;
+    word-wrap: break-word;
+    float: right
+
+}
+
+.kartinka{
+    float:left;
+    padding-right: 20px;
+}
+
+.btn-default{
+   background-color: #E6E6E6 ;
+    color: #337AB7 ;
+    margin-bottom: 10px ;
+
+}
+
+.btn-default:hover{
+    color: #23527C ;
+}
+
+.commentclin{
+    clear:both;
+    padding-top: 20px;
+}
+
+.bottom-img{
+    margin-bottom: 20px ;
+    display: inline-block;
 }

@@ -19,9 +19,25 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 
+from django.contrib.sitemaps.views import sitemap
+from python4bear.sitemaps import PostSitemap
+
+sitemaps = {
+    'posts': PostSitemap,
+}
+
 urlpatterns = [
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
     url(r'^admin/', admin.site.urls),
     url(r'', include('python4bear.urls', namespace='python4bear')),
     url(r'', include('accounts.urls', namespace='accounts')),
+    url(r'', include('search.urls', namespace='search')),
+    url(r'^images/', include('images.urls', namespace='images')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),
+
+    url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
+
+    url('^', include('django.contrib.auth.urls')),
 
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

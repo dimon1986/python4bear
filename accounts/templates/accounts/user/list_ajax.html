@@ -1,0 +1,40 @@
+{% load static %}
+{% load counter %}
+
+<div class="row">
+
+        {% for user in users %}
+
+            <div class="user">
+                <a href="{{ user.get_absolute_url }}">
+                    {% if user.profile.photo %}
+        <img class="img-circle" src="{{ user.profile.photo.crop.150x150 }}">
+        {% else %}
+         <img src="{% static 'img/avatar.svg' %}" alt="" width="150">
+        {% endif %}
+                </a>
+
+                 <span>
+                    <a href="{{ user.get_absolute_url }}" class="title">{{ user.get_full_name }}
+                    {% if not user.first_name %}
+            {{ user }}
+            {% endif %}
+                    </a>
+
+                     <span>|        {% with total_images_created=user.images_created.count %}
+                         пинов  -  {{ total_images_created }}
+                        {% endwith %}</span>
+
+                     <span>|        {% with total_posts_created=user.posts.count %}
+                         постов  -  {{ total_posts_created }}
+                        {% endwith %}</span>
+
+                </span>
+
+                <hr>
+
+</div>
+
+        {% endfor %}
+
+    </div>

@@ -1,0 +1,47 @@
+{% load static %}
+{% load image_tags %}
+
+<link rel="stylesheet" href="{% static 'css/app.css' %}">
+
+    <div class="footer-blurb">
+			<div class="container">
+				<div class="row">
+                {% for post in similar_posts %}
+					<div class="col-sm-3 footer-blurb-item">
+						<h3><i class="fa fa-paperclip" aria-hidden="true"></i>
+                        {{ post.title }}</h3>
+						<div class="hollitexst">{{ post.text|striptags|safe|truncatewords:15|linebreaks }}</div>
+						<div class="mt-3">
+                        <a href="{{ post.get_absolute_url }}" class="btn btn-default" role="button">Ознакомиться</a>
+                        </div>
+					</div>
+                {% empty %}
+                    <hr>
+                    <i><small class="text-muted d-block">Постов с данной тематикой не существует.</small></i>
+                {% endfor %}
+
+                    <div class="col-sm-3 footer-blurb-item">
+						<!-- Thumbnails -->
+						<h3><i class="fa fa-camera" aria-hidden="true"></i>ПоследниеКартинки</h3>
+
+                        <p>Картинок на сайте всего {% total_image %}</p>
+
+							<div class="row">
+                                {% for image in image_js %}
+								<div class="col-xs-6">
+                                    <div class="info">
+                                    <a href="{{ image.get_absolute_url }}" class="title">подробние</a>
+                                    </div>
+									<a href="{{ image.image.url }}">
+                                    <img src="{{ image.image.crop.100x100 }}" class="image-detail">
+                                    </a>
+								</div>
+                                {% endfor %}
+							</div>
+
+					</div>
+                </div>
+            </div>
+            </div>
+
+

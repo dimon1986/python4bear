@@ -1,0 +1,37 @@
+{% extends 'python4bear/base.html' %}
+
+
+{% load static %}
+{% load bootstrap3 %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+
+
+{% block sidebar %}
+  <li class="breadcrumb-item"><a href="{% url 'python4bear:home' %}">Topics</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'python4bear:posts_all' post.topic.pk %}">{{ post.topic.text}}</a></li>
+  <li class="breadcrumb-item active"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+{% endblock sidebar%}
+
+
+{% block content %}
+{% if sent %}
+        <h1>E-mail отправлен, дойдёт если только не Маил.ру</h1>
+        <p>
+            "{{ post.title }}" was successfully sent to {{ cd.to }}.
+        </p>
+    {% else %}
+        <h1>Share "{{ post.title }}" by e-mail</h1>
+        <form action="." method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button name='submit' class="btn btn-primary">Отправить e-mail</button>
+        </form>
+    {% endif %}
+
+
+{% endblock content%}
+
+{% block footer %}
+{% endblock footer %}

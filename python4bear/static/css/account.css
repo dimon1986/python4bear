@@ -1,0 +1,27 @@
+body {
+  background-image: url(../img/shattebllu.png);
+}
+
+.logo {
+  font-family: 'Peralta', cursive;
+}
+
+.logo a {
+  color: rgba(0,0,0,.9);
+}
+
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+}
+
+.button_js {
+  display: block;
+  background-color: #E6E6E6;
+  border: 2px solid rgba(68, 172, 250, 0.1);
+
+}
+
+.button_js :hover{
+  text-decoration: none;
+}

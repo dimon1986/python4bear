@@ -1,4 +1,4 @@
-#!c:\development\my_blog\blog\scripts\python.exe
+#!C:\Development\my_blog\blog\Scripts\python.exe
 """PILdriver, an image-processing calculator using PIL.
 
 An instance of class PILDriver is essentially a software stack machine

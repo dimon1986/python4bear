@@ -1,40 +1,76 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login, PasswordChangeView, PasswordChangeDoneView
 from . import views
+from django.urls import reverse_lazy
 
-from django.contrib.auth.views import PasswordResetView, PasswordResetDoneView,  PasswordResetConfirmView, PasswordResetCompleteView
+from django.contrib.auth.views import (
+    LoginView, PasswordChangeView, PasswordChangeDoneView,
+    PasswordResetView, PasswordResetDoneView,
+    PasswordResetConfirmView, PasswordResetCompleteView
+)
 
 urlpatterns = [
-    url(r'^login/$', login, {'template_name': 'accounts/login.html'}, name='login'),
+    # Страница входа.
+    url(r'^login/$', LoginView.as_view
+    (template_name='accounts/registration/login.html'), name='login'),
     # Страница выхода.
     url(r'^logout/$', views.logout_view, name='logout'),
-    #регистрация вроди как, уже мозг кипит....
+    #регистрация вроде, как...
     url(r'^signup/$', views.signup, name='signup'),
-    # ссылка на изменение имяни, фамилии и почты
-    url(r'^settings/account/$', views.UserUpdateView.as_view(), name='my_account'),
+    # ссылка на изменение имяни, фамилии и почты вобщем настройки аккаунта
+    url(r'^accounts/profile/$', views.edit_account, name='my_account'),
+
+
+    # смена пароля под своим аккаунтом
+    url(r'^password-change/$', PasswordChangeView.as_view(
+        template_name='accounts/registration/password_change.html',
+        success_url=reverse_lazy('accounts:password_change_done')
+    ),
+        name='password_change'),
+
+    url(r'^password-change-done/$', PasswordChangeDoneView.as_view(
+        template_name='accounts/registration/password_change_done.html'),
+        # если что лизи
+        name='password_change_done'),
 
     # Если забыли пароль вот это всё решит ваши проблемы |
-    url(r'^reset/$', PasswordResetView.as_view(
-            template_name='accounts/password_reset.html',
-            email_template_name='accounts/password_reset_email.html',
-            subject_template_name='accounts/password_reset_subject.txt'),
+    url(r'^password-reset/$', PasswordResetView.as_view(
+        template_name='accounts/registration/password_reset.html',
+        email_template_name='accounts/registration/password_reset_email.html',
+        success_url=reverse_lazy('accounts:password_reset_done'),
+    ),
         name='password_reset'),
 
-    url(r'^reset/done/$', PasswordResetDoneView.as_view(template_name='accounts/password_reset_done.html'),
+    url(r'^password-reset/done/$', PasswordResetDoneView.as_view(
+        template_name='accounts/registration/password_reset_done.html',),
         name='password_reset_done'),
 
-    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
-        PasswordResetConfirmView.as_view(template_name='accounts/password_reset_confirm.html'),
+    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$',
+        PasswordResetConfirmView.as_view(
+            template_name='accounts/registration/password_reset_confirm.html',
+            success_url=reverse_lazy('accounts:password_reset_complete'),
+        ),
         name='password_reset_confirm'),
 
-    url(r'^reset/complete/$', PasswordResetCompleteView.as_view(template_name='accounts/password_reset_complete.html'),
+    url(r'^password-reset/complete/$',
+        PasswordResetCompleteView.as_view(
+            template_name='accounts/registration/password_reset_complete.html',
+        ),
         name='password_reset_complete'),
 
-    # если сами решили сменить в своём профиле
-    url(r'^settings/password/$', PasswordChangeView.as_view(template_name='accounts/password_change.html'),
-        name='password_change'),
-    url(r'^settings/password/done/$', PasswordChangeDoneView.as_view(template_name='accounts/password_change_done.html'),
-        name='password_change_done'),
+
+    # только так сначало фолловерз, а потом все для него иначе джскрипт не сработает
+    url(r'^users/followers/$', views.user_follow, name='user_follow'),
+
+    # лист пользователей
+    url(r'^users/$', views.user_list, name='user_list'),
+
+    # конкретный юзер
+    url(r'^users/(?P<username>[-\w]+)/$',
+        views.user_detail, name='user_detail'),
+    # новости по сути
+    url(r'^track/$', views.track, name='track'),
+
+
 
 
 ]

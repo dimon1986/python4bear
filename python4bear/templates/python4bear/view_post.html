@@ -1,4 +1,6 @@
 {% extends 'python4bear/base.html' %}
+
+
 {% load static %}
 {% load bootstrap3 %}
 
@@ -8,7 +10,7 @@
 
 {% block sidebar %}
   <li class="breadcrumb-item"><a href="{% url 'python4bear:home' %}">Topics</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'python4bear:posts_all' post.topic.pk %}">{{ post.topic.text }}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'python4bear:posts_all' post.topic.pk %}">{{ post.topic.text}}</a></li>
   <li class="breadcrumb-item active">{{ post.title }}</li>
 {% endblock sidebar%}
 
@@ -18,54 +20,103 @@
      <div class="mb-4">
      {% if post.owner == user %}
          <div class="mt-3">
-             <a href="{% url 'python4bear:edit_post' post.topic.pk post.pk  %}" class="btn btn-primary" role="button">Редактировать Пост</a>
+             <a href="{% url 'python4bear:edit_post' post.topic.pk post.slug%}" class="btn btn-primary" role="button">Редактировать Пост</a>
          </div>
      {% endif %}
      </div>
 
-    <h2>{{ post.title }}</h2>
+    <div class="row">
+
+				<article class="col-xs-10">
+    <br>
+                <div class="panel panel-default ">
+                <div class="panel-heading">
+                    <h2 >{{ post.title }}</h2>
+                </div>
+
     <div class="panel-body">
-       {{ post.text|linebreaks }}
+
+    <div class="hollitexst">
+    {% if post.image %}
+        <img class="kartinka" src="{{ MEDIA_URL }}{{ post.image.url }}" alt="" title="" height="300">
+    {% endif %}
+
+       {{ post.text|safe }}
     </div>
 
-    <hr>
-  {% for comment in post.comment.all %}
-    <div class="card mb-2">
-      <div class="card-body p-3">
+
+
+    <p>
+    <a href="{% url "python4bear:post_share" post.slug %}">Отправить на почту</a>
+    </p>
+    </div>
+                </div>
+
+    <hr><div class="commentclin">
+
+  {% for comment in comments %}
+    <div class="panel panel-default">
+      <div class="panel-body">
         <div class="row">
-          <div class="col-2">
-            <img src="{% static 'img/avatar.svg' %}" alt="{{ comment.owner.username }}" class="w-50">
-            <small>Posts: {{ comment.owner.comment.count }}</small>
+          <div class="col-md-2">
+              {% if comment.owner.profile.photo %}
+                  <img class="img-circle" src="{{ comment.owner.profile.photo.crop.60x60 }}">
+              {% else %}
+                  <img src="{% static 'img/avatar.svg' %}" alt="{{ comment.owner.username }}" class="w-50">
+              {% endif %}
+            <br>
+              <small>Posts: {{ comment.owner.comment.count }}</small>
           </div>
-          <div class="col-10">
+          <div class="col-xs-10">
             <div class="row mb-3">
-              <div class="col-6">
+              <div class="col-xs-6">
                 <strong class="text-muted">{{ comment.owner.username }}</strong>
               </div>
-              <div class="col-6 text-right">
+              <div class="col-xs-6 text-right">
                 <small class="text-muted">{{ comment.date_added }}</small>
               </div>
             </div>
-            {{ comment.get_message_as_markdown  }}
+
+            {{ comment.text|safe }}
           </div>
         </div>
       </div>
     </div>
 
+
     {% endfor %}
 
-    <hr>
-    {% if user.is_authenticated %}
-      <form action="{% url 'python4bear:view_post' post.topic.pk post.pk%}" method='post'>
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <button name='submit' class="btn btn-primary">Сумничить</button>
-      </form>
+    </div><hr>
+
+    {% if not sent %}
+{#        делаю через стаил так как возвращается нон и отображаетс#}
+        <div style="display: none" >
+        {{ post.get_views_plus }}
+        </div>
+        {% if user.is_authenticated %}
+            <form action="{% url 'python4bear:view_post' post.topic.pk post.slug%}" method='post'>
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button name='submit' class="btn btn-primary">Сумничить</button>
+            </form>
+        {% else %}
+            <p>Что бы оставлять коментарии выполните - <a href="{% url 'accounts:login' %}?next={{ request.get_full_path|urlencode }}"><i>Вход</i></a></p>
+            <p>Либо пройдите процедуру - <a href="{% url 'accounts:signup' %}?next={{ request.get_full_path|urlencode }}"><i>Регистрация</i></a></p>
+        {% endif %}
+
     {% else %}
-        <p>Что бы оставлять коментарии выполните - <a href="{% url 'accounts:login' %}"><i>Вход</i></a></p>
-        <p>Либо пройдите процедуру - <a href="{% url 'accounts:signup' %}"><i>Регистрация</i></a></p>
+        <h3>Ваш коментарий добавлен, будет проверен и если всё хорошо опубликован.</h3>
     {% endif %}
+
+    </article>
+    {% include 'python4bear/rait_colum.html' %}
+			</div>
+
 
 
 {% endblock content%}
+
+{% block footer %}
+    		{% include 'python4bear/footer_box.html' %}
+{% endblock footer %}
 

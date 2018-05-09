@@ -3,7 +3,7 @@
 
 
       {% block sidebar %}
-        <li class="breadcrumb-item active">Toics</li>
+        <li class="breadcrumb-item active">Topics</li>
       {% endblock sidebar%}
 
       {% block content %}
@@ -27,14 +27,14 @@
               <small class="text-muted d-block">{{ topic.description }}</small>
             </td>
             <td class="align-middle">{{ topic.posts.count }}</td>
-            <td class="align-middle">{{ topic.get_comment_count }}</td>
+            <td class="align-middle"><span class="badge">{{ topic.get_comment_count }}</span></td>
             <td class="align-middle">
                 {% with comment=topic.get_last_comment %}
                     {% if comment %}
               <small>
-                <a href="{% url 'python4bear:view_post' topic.pk comment.post.pk %}">
-                  Создал: {{ comment.owner.username }} : {{ comment.date_added }}
-                </a>
+{#                <a href="{% url 'python4bear:view_post' topic.pk comment.post.pk post.slug%}">#}
+                  Молвил: {{ comment.owner.username }} : {{ comment.date_added }}
+{#                </a>#}
               </small>
                      {% else %}
                        <small class="text-muted">
@@ -49,6 +49,10 @@
       </tbody>
     </table>
 
-       {% include 'python4bear/pagination.html' %}
+       {% include 'python4bear/pagination_def.html' with page=topics %}
 
 {% endblock content%}
+
+{% block footer %}
+    		{% include 'python4bear/footer_box.html' %}
+{% endblock footer %}

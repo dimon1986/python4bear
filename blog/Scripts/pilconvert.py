@@ -1,4 +1,4 @@
-#!c:\development\my_blog\blog\scripts\python.exe
+#!C:\Development\my_blog\blog\Scripts\python.exe
 #
 # The Python Imaging Library.
 # $Id$

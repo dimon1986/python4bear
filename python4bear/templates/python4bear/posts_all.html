@@ -17,10 +17,15 @@
         <a href="{% url 'python4bear:new_post' topic.pk %}"><button name='submit' class="btn btn-primary">New post</button></a>
       </div>
 
+
+    {% if sent %}
+        <h3>Ваш пост добавлен, будет проверен и если всё хорошо опубликован.</h3>
+    {% endif %}
+
   <table class="table">
     <thead class="table-fon">
       <tr>
-        <th>Тема</th>
+        <th>Пост</th>
         <th>Тварец</th>
         <th>Коментарии</th>
         <th>Просмотры</th>
@@ -28,24 +33,33 @@
       </tr>
     </thead>
     <tbody>
+
       {% for post in posts %}
-        <tr>
+          {% if post.status == 'published'%}
+              <tr>
           <td>
               <p class="mb-0">
-              <a href="{% url 'python4bear:view_post' topic.pk post.pk %}">{{ post.title }}</a>
+                  <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+{#              <a href="{% url 'python4bear:view_post' topic.pk post.slug%}">{{ post.title }}</a>#}
               </p>
           </td>
           <td><small class="text-muted d-block">{{ post.owner.username }}</small></td>
-          <td>{{ post.replies }}</td>
+                  <td class="align-middle"><span class="badge">{{ post.replies }}</span></td>
           <td>{{ post.views }}</td>
 
-          <td><small class="text-muted d-block">{{ post.date_added|date:'M d, Y H:i' }}</small></td>
+          <td><small class="text-muted d-block">{{ post.publish|date:'M d, Y H:i' }}</small></td>
 
         </tr>
+          {% endif %}
       {% endfor %}
+
     </tbody>
   </table>
 
-       {% include 'python4bear/pagination.html' %}
+    {% include 'python4bear/pagination_def.html'  with page=posts %}
 
    {% endblock content%}
+
+    {% block footer %}
+        {% include 'python4bear/footer_box.html' %}
+    {% endblock footer %}

@@ -1,0 +1,140 @@
+{% extends 'python4bear/base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% load counter %}
+
+{% block title %}{{ image.title }}{% endblock %}
+
+   {% block sidebar %}
+       <li class="breadcrumb-item"><a href="{% url "images:list" %}">Images</a></li>
+       <li class="breadcrumb-item active">{{ image.title }}</li>
+    {% endblock sidebar%}
+
+{% block content %}
+
+    <div class="col-md-4">
+
+    <a href="{{ image.image.url }}">
+    <img src="{{ image.image.url }}" class="image-detail">
+    </a>
+<span>Просмотров: {% page_views image.get_absolute_url %}</span>
+{% with total_likes=image.users_like.count users_like=image.users_like.all %}
+
+    <div class="image-info">
+                <div>
+                    <span class="count">
+                        <span class="total">{{ total_likes }}</span>
+                        like{{ total_likes|pluralize }}
+                    </span>
+                    <a href="#" data-id="{{ image.slug }}" data-action="{% if request.user in users_like %}un{% endif %}like" class="btn btn-default like button">
+                        {% if request.user not in users_like %}
+                            Like
+                        {% else %}
+                            Unlike
+                        {% endif %}
+                    </a>
+                </div>
+
+            {{ image.description|linebreaks }}
+        </div>
+
+
+<div class="image-likes">
+            {% for user in image.users_like.all %}
+
+                    {% if user.profile.photo %}
+                  <img class="img-circle" src="{{ MEDIA_URL }}{{ user.profile.photo.crop.50x50 }}">
+                        {% if not user.first_name %}
+                            <p>{{ user }}</p>
+                            {% endif %}
+                    <p>{{ user.first_name }}</p>
+                    {% else %}
+                  <img src="{% static 'img/avatar.svg' %}" alt="{{ user }}" class="w-50">
+                        <p>{{ user }}</p>
+                    {% endif %}
+
+            {% empty %}
+                Этот образ пока никому не нравится.
+            {% endfor %}
+        </div>
+    {% endwith %}
+</div>
+
+    <div class="row justify-content-right">
+
+  <div class="col-md-4 col-md-push-4">
+<h3>Эмоции людей :</h3>
+     <hr><div class="commentclin">
+  {% for twit in twits %}
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-2">
+              {% if twit.owner.profile.photo %}
+                  <img class="img-circle" src="{{ MEDIA_URL }}{{ twit.owner.profile.photo.crop.50x50 }}">
+              {% else %}
+                  <img src="{% static 'img/avatar.svg' %}" alt="{{ twit.owner.username }}" class="w-50">
+              {% endif %}
+            <br>
+          </div>
+          <div class="col-xs-10">
+            <div class="row mb-3">
+              <div class="col-xs-6">
+                <strong class="text-muted">{{ twit.owner.username }}</strong>
+              </div>
+              <div class="col-xs-6 text-right">
+                <small class="text-muted">{{ twit.date_added }}</small>
+              </div>
+            </div>
+            {{ twit.text|safe }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+
+    {% if user.is_authenticated %}
+            <form action="{% url 'images:detail' image.slug%}" method='post'>
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <button name='submit' class="btn btn-primary">Твитнуть</button>
+            </form>
+        {% else %}
+            <p>Что бы оставлять коментарии выполните - <a href="{% url 'accounts:login' %}?next={{ request.get_full_path|urlencode }}"><i>Вход</i></a></p>
+            <p>Либо пройдите процедуру - <a href="{% url 'accounts:signup' %}?next={{ request.get_full_path|urlencode }}"><i>Регистрация</i></a></p>
+        {% endif %}
+  </div>
+  </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block domready %}
+    $('a.like').click(function(e){
+        e.preventDefault();
+        $.post('{% url "images:like" %}',
+            {
+                id: $(this).data('id'),
+                action: $(this).data('action')
+            },
+            function(data){
+                if (data['status'] == 'ok')
+                {
+                    var previous_action = $('a.like').data('action');
+
+                    // toggle data-action
+                    $('a.like').data('action', previous_action == 'like' ? 'unlike' : 'like');
+                    // toggle link text
+                    $('a.like').text(previous_action == 'like' ? 'Unlike' : 'Like');
+
+                    // update total likes
+                    var previous_likes = parseInt($('span.count .total').text());
+                    $('span.count .total').text(previous_action == 'like' ? previous_likes + 1 : previous_likes - 1);
+                }
+        });
+    });
+{% endblock %}

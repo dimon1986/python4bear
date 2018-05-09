@@ -3,28 +3,22 @@
 {% load bootstrap3 %}
 
 {% block title %}Редактируем...{% endblock %}
-{% block stylesheet %}
-    <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
-{% endblock stylesheet%}
+
+
 {% block sidebar %}
   <li class="breadcrumb-item"><a href="{% url 'python4bear:home' %}">Topics</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'python4bear:posts_all' post.topic.pk %}">{{ post.topic.text }}</a></li>
-  <li class="breadcrumb-item"><a href="{% url 'python4bear:view_post' post.topic.pk post.pk  %}">{{ post.title }}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'python4bear:posts_all' topic.pk %}">{{ post.topic.text }}</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'python4bear:view_post' topic.pk post.slug%}">{{ post.title }}</a></li>
   <li class="breadcrumb-item active">Редактируем этот Post</li>
 {% endblock sidebar %}
 
 {% block content %}
 
-  <form action="{% url 'python4bear:edit_post' post.topic.pk post.pk %}" method='post'>
+  <form action="{% url 'python4bear:edit_post' topic.pk post.slug%}" method='post'>
     {% csrf_token %}
-    {% bootstrap_form form %}
+    {{ form.media }}
+    {{ form.as_p }}
     <button name="submit" class="btn btn-primary">Сохранить</button>
   </form>
 
 {% endblock %}
-{% block JS %}
- <script src="{% static 'js/simplemde.min.js' %}"></script>
-  <script>
-    var simplemde = new SimpleMDE();
-  </script>
-{% endblock JS %}
